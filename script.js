@@ -136,3 +136,4 @@ window.addEventListener("focus", () => {
 window.addEventListener("resize", () => {
   if (gameRunning) makeBubbles();
 });
+
