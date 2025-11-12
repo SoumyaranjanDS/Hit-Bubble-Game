@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Target Hit Bubble Game</title>
+
+  <!-- Google Font: Poppins -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <!-- Tailwind Play CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body class="font-[Poppins] bg-gradient-to-br from-fuchsia-200 via-sky-200 to-cyan-200 min-h-screen flex items-center justify-center select-none">
+
+  <!-- MAIN CONTAINER -->
+  <div class="bg-white/60 backdrop-blur-md rounded-3xl shadow-xl w-[90%] md:w-[550px] overflow-hidden relative">
+
+    <!-- TOP INFO BAR -->
+    <div class="flex justify-between items-center px-6 py-4 bg-white/70 border-b border-slate-300 text-slate-800 font-semibold">
+      <div class="text-center">
+        <p class="text-sm">Hit</p>
+        <h2 id="hitVal" class="text-2xl font-bold text-pink-600">0</h2>
+      </div>
+      <div class="text-center">
+        <p class="text-sm">Timer</p>
+        <h2 id="timerVal" class="text-2xl font-bold text-indigo-600">60</h2>
+      </div>
+      <div class="text-center">
+        <p class="text-sm">Score</p>
+        <h2 id="scoreVal" class="text-2xl font-bold text-emerald-600">0</h2>
+      </div>
+    </div>
+
+    <!-- GAME PANEL -->
+    <div id="panel" class="p-4 grid grid-cols-6 gap-3 justify-items-center bg-gradient-to-br from-pink-200 via-blue-200 to-teal-100 h-[420px] overflow-hidden"></div>
+
+    <!-- START/END OVERLAY -->
+    <div id="overlay" class="absolute inset-0 flex flex-col items-center justify-center bg-slate-900/70 text-white transition">
+      <h1 class="text-3xl font-bold mb-4">Target Hit Bubble Game</h1>
+      <button id="startBtn" class="bg-indigo-500 hover:bg-indigo-600 px-6 py-3 rounded-xl text-lg font-semibold transition">
+        Start Game
+      </button>
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
